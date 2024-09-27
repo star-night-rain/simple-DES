@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.simpledes.manager.DESManager;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 @Slf4j
 public class DESManagerImpl implements DESManager {
@@ -98,5 +101,22 @@ public class DESManagerImpl implements DESManager {
     public String finalPermutation(String data) {
         int[] PBox = {4, 1, 3, 5, 7, 2, 8, 6};
         return permutation(data, PBox);
+    }
+
+    private static void generateKeys(List<String> keys, String current, int length) {
+        if (length == 10) {
+            keys.add(current);
+            return;
+        }
+        generateKeys(keys, current + "0", length + 1);
+        generateKeys(keys, current + "1", length + 1);
+    }
+
+    public List<String> generateKeys() {
+        List<String> keys = new ArrayList<>();
+
+        generateKeys(keys, "", 0);
+
+        return keys;
     }
 }

@@ -1,10 +1,16 @@
 package org.example.simpledes.service;
 
+import org.example.simpledes.domain.dto.BreakDto;
 import org.example.simpledes.domain.dto.DecodeDto;
 import org.example.simpledes.domain.dto.EncodeDto;
+import org.example.simpledes.domain.vo.BreakVo;
+import org.example.simpledes.domain.vo.DecodeVo;
+import org.example.simpledes.domain.vo.EncodeVo;
 
 public interface DESService {
-    String encode(EncodeDto encodeDto);
+    EncodeVo encode(EncodeDto encodeDto);
 
-    String decode(DecodeDto decodeDto);
+    DecodeVo decode(DecodeDto decodeDto);
+
+    BreakVo bruteForceKey(BreakDto breakDto);
 }
