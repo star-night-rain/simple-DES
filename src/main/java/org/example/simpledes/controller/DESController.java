@@ -9,14 +9,12 @@ import org.example.simpledes.domain.vo.DecodeVo;
 import org.example.simpledes.domain.vo.EncodeVo;
 import org.example.simpledes.service.DESService;
 import org.example.simpledes.utils.Result;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/des")
 @Slf4j
+@CrossOrigin(origins = "*")
 public class DESController {
 
     private final DESService desService;
