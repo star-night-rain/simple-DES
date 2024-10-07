@@ -1,7 +1,5 @@
 # simple-DES
 
----
-
 ## Introduction
 
 This project implements a simple DES algorithm based
