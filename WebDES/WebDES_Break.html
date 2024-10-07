@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-DES Break</title>
+    <link rel="stylesheet" href="break.css">
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="p2.png" alt="S-DES Image">
+    </div>
+    <div class="input-group-container">
+        <h1>S-DES Break</h1>
+        <div class="input-group">
+            <label for="inputText">密文:</label>
+            <input type="text" id="inputText" placeholder="请输入密文">
+        </div>
+        <div class="input-group">
+            <label for="plainText">明文匹配项:</label>
+            <input type="text" id="plainText" placeholder="请输入明文匹配项">
+        </div>
+        <button id="breakBtn">开始破解</button>
+
+        <div class="input-group">
+            <label for="keyResult">密钥:</label>
+            <input type="text" id="keyResult" readonly placeholder="破解出的密钥">
+        </div>
+
+        <div class="input-group">
+            <label for="timeResult">破解时间:</label>
+            <input type="text" id="timeResult" readonly placeholder="破解时间">
+        </div>
+    </div>
+</div>
+<script src="break.js"></script>
+</body>
+</html>
